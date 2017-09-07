@@ -420,6 +420,10 @@ class VMWareMetricsResource(Resource):
 
 
 if __name__ == '__main__':
+    # set system default encoding as utf-8
+    reload(sys)
+    sys.setdefaultencoding('utf-8')
+
     parser = ArgumentParser(description='VMWare metrics exporter for Prometheus')
     parser.add_argument('-c', '--config', dest='config_file',
                         default='config.yml', help="configuration file")
